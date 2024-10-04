@@ -1,1 +1,1 @@
-# nrf-peer-manager-whitelist-bonding-
+# nrf-peer-manager-whitelist-bonding- 개념정리
