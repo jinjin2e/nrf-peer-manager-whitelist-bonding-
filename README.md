@@ -1,4 +1,4 @@
-# nrf-peer-manager-whitelist-bonding- 개념정리
+# nrf-peer-manager-whitelist-bonding- 개념정리 및 상대 디바이스가 random peer address에 대한 IRK키 추가 
 
 
 ## 1. Peer Manager
