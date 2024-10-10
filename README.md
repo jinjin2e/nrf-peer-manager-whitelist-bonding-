@@ -46,3 +46,17 @@ Bonding은 페어링된 장치의 보안 정보를 저장하는 과정이며, Pe
 Whitelist는 본딩된 장치들만 다시 연결을 허용할 때 자주 사용되며, Peer Manager에 의해 관리될 수 있습니다.
 이러한 개념들은 BLE에서 보안 및 장치 관리의 핵심 요소로 작동하며, 서로 유기적으로 연결되어 BLE 연결의 안정성과 보안을 강화합니다.
 ```
+
+
+
+## android 기기에서 peer manager
+
+android 기기에서 peer address 값은 장치에 연결될 때마다 계속 변합니다. (보안)  
+그렇기 때문에 Peer Manager가 IRK를 사용해 변하는 주소를 해석하고, Peer ID를 기반으로 장치를 식별합니다. Peer Address는 변하지만, Peer ID는 변하지 않습니다.
+```
+IRK (Identity Resolving Key)를 사용하여 Peer Manager에서 **Resolvable Private Address (RPA)**를 통해 변하는 주소를 해석할 수 있기 때문에, 주소 변경에 관계없이 동일한 장치임을 확인할 수 있습니다.
+
+Peer Address 자체는 RPA로 인해 변할 수 있지만, Peer Manager가 이를 IRK를 사용하여 올바르게 처리하면 장치 식별에 문제가 없습니다.
+
+Peer Manager는 Bonding된 장치의 IRK를 사용하여 변하는 주소를 해석해, 변동하는 주소와 상관없이 동일한 장치로 인식합니다.
+```
